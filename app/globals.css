@@ -1,0 +1,296 @@
+@import "tailwindcss";
+
+/* 기본 색상 */
+
+:root {
+  --background: #ffffff;
+  --foreground: #000000;
+}
+
+body {
+  background: var(--background);
+  color: var(--foreground);
+}
+
+::selection {
+  background: #000000;
+  color: #ffffff;
+}
+
+.daf-root {
+  --daf-paper: #ffffff;
+  --daf-surface: #ffffff;
+  --daf-surface-soft: #ffffff;
+  --daf-surface-muted: #ffffff;
+  --daf-surface-deep: #ffffff;
+  --daf-soft: rgba(0, 0, 0, 0.055);
+  --daf-line: rgba(0, 0, 0, 0.22);
+  --daf-meta: rgba(0, 0, 0, 0.52);
+  --daf-danger: #5f2320;
+  --daf-danger-soft: rgba(95, 35, 32, 0.1);
+  background: var(--daf-paper);
+  color: #050505;
+  font-family:
+    "Arial Narrow",
+    "Helvetica Neue",
+    Arial,
+    sans-serif;
+  font-feature-settings: "kern" 1, "liga" 0;
+  letter-spacing: 0;
+}
+
+.daf-root h1,
+.daf-root h2,
+.daf-root h3 {
+  text-transform: uppercase;
+  font-weight: 600;
+}
+
+.daf-root button,
+.daf-root input,
+.daf-root textarea,
+.daf-root select {
+  font-family:
+    "Courier New",
+    "SFMono-Regular",
+    Consolas,
+    ui-monospace,
+    monospace;
+}
+
+.daf-root button,
+.daf-root a,
+.daf-root input,
+.daf-root textarea,
+.daf-root select {
+  text-underline-offset: 4px;
+}
+
+.daf-root button,
+.daf-root a {
+  cursor: pointer;
+}
+
+.daf-root input,
+.daf-root textarea,
+.daf-root select {
+  background-color: #ffffff;
+  border-color: rgba(0, 0, 0, 0.16);
+  color: #050505;
+}
+
+.daf-root input::placeholder,
+.daf-root textarea::placeholder {
+  color: rgba(0, 0, 0, 0.36);
+}
+
+.daf-root input:focus,
+.daf-root textarea:focus,
+.daf-root select:focus {
+  box-shadow: inset 0 -1px 0 #000000;
+}
+
+.daf-root [class*="tracking-"] {
+  text-rendering: geometricPrecision;
+}
+
+.daf-root [class*="border-black"] {
+  border-color: var(--daf-line);
+}
+
+.daf-root .border-black {
+  border-color: #000000;
+}
+
+.daf-root .bg-white {
+  background-color: #ffffff;
+}
+
+.daf-root [class*="bg-white/"] {
+  background-color: rgba(255, 255, 255, 0.82);
+}
+
+.daf-root [class*="bg-black/5"],
+.daf-root [class*="bg-black/6"] {
+  background-color: #ffffff;
+}
+
+.daf-root [class*="border-red-"] {
+  border-color: rgba(95, 35, 32, 0.45);
+}
+
+.daf-root [class*="text-red-"] {
+  color: var(--daf-danger);
+}
+
+.daf-root [class*="text-neutral-400"] {
+  color: rgba(0, 0, 0, 0.32);
+}
+
+.daf-root [class*="text-neutral-500"] {
+  color: rgba(0, 0, 0, 0.46);
+}
+
+.daf-root [class*="text-neutral-600"] {
+  color: rgba(0, 0, 0, 0.6);
+}
+
+.daf-root [class*="text-neutral-700"] {
+  color: rgba(0, 0, 0, 0.72);
+}
+
+.daf-root [class*="text-neutral-800"] {
+  color: rgba(0, 0, 0, 0.82);
+}
+
+.daf-root [class*="border-black/10"],
+.daf-root [class*="border-black/15"],
+.daf-root [class*="border-black/20"],
+.daf-root [class*="border-black/25"],
+.daf-root [class*="border-black/30"],
+.daf-root [class*="border-neutral-"] {
+  border-color: rgba(0, 0, 0, 0.16);
+}
+
+.daf-root [class*="placeholder:text-neutral-400"]::placeholder {
+  color: rgba(0, 0, 0, 0.32);
+}
+
+.daf-root [class*="hover:bg-red-"]:hover {
+  background-color: var(--daf-danger);
+  color: #ffffff;
+}
+
+.daf-root [class*="hover:bg-black"]:hover,
+.daf-root [class*="focus-visible:bg-black"]:focus-visible {
+  background-color: #050505;
+  color: #ffffff;
+}
+
+.daf-root article,
+.daf-root figure {
+  position: relative;
+}
+
+.daf-root article::selection,
+.daf-root figure::selection {
+  background: #000000;
+  color: #ffffff;
+}
+
+.daf-root .journal-body {
+  font-family:
+    "Times New Roman",
+    "Noto Serif",
+    Georgia,
+    serif;
+}
+
+.daf-root .journal-body h1,
+.daf-root .journal-body h2,
+.daf-root .journal-body h3 {
+  font-family:
+    "Arial Narrow",
+    "Helvetica Neue",
+    Arial,
+    sans-serif;
+  letter-spacing: 0.08em;
+}
+
+.daf-root .journal-body p,
+.daf-root .journal-body li {
+  color: rgba(0, 0, 0, 0.78);
+}
+
+.daf-root .journal-body blockquote {
+  border-left: 1px solid #000000;
+  font-style: italic;
+}
+
+.daf-root .group.border,
+.daf-root article.border,
+.daf-root section.border {
+  box-shadow: 0 0 0 1px rgba(255, 255, 255, 0.32) inset;
+}
+
+.daf-root .group.border:hover {
+  box-shadow:
+    0 0 0 1px #000000 inset,
+    4px 4px 0 rgba(0, 0, 0, 0.08);
+}
+
+/* click to enter blink */
+
+@keyframes blink {
+  0% {
+    opacity: 1;
+  }
+
+  50% {
+    opacity: 0.25;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}
+
+.blink {
+  animation: blink 1.2s infinite;
+}
+@keyframes screenFlicker {
+  0% { opacity: 0.035; }
+  10% { opacity: 0.02; }
+  20% { opacity: 0.04; }
+  30% { opacity: 0.018; }
+  40% { opacity: 0.03; }
+  50% { opacity: 0.015; }
+  60% { opacity: 0.04; }
+  70% { opacity: 0.02; }
+  80% { opacity: 0.03; }
+  90% { opacity: 0.018; }
+  100% { opacity: 0.035; }
+}
+
+@keyframes scanlineShift {
+  0% { transform: translateY(0); }
+  100% { transform: translateY(6px); }
+}
+
+.hero-noise {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  background-image:
+    repeating-linear-gradient(
+      to bottom,
+      rgba(0, 0, 0, 0.035) 0px,
+      rgba(0, 0, 0, 0.035) 1px,
+      transparent 2px,
+      transparent 4px
+    );
+  mix-blend-mode: multiply;
+  animation: screenFlicker 0.18s steps(2) infinite;
+}
+
+.hero-glitch {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  background: linear-gradient(
+    to bottom,
+    rgba(255, 255, 255, 0) 0%,
+    rgba(0, 0, 0, 0.03) 45%,
+    rgba(255, 255, 255, 0) 100%
+  );
+  mix-blend-mode: multiply;
+  animation: scanlineShift 5s linear infinite;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .blink,
+  .hero-noise,
+  .hero-glitch {
+    animation: none;
+  }
+}
